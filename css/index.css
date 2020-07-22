@@ -1,0 +1,286 @@
+body {
+  background-color: black;
+  font-family: "Lora", serif;
+}
+.widget {
+  display: flex;
+  height: 90vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bodyWiget {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+}
+
+.clockH1,
+.dateH1 {
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  animation: fadeIn 8s linear;
+}
+.greetingContainer {
+  width: 400px;
+  margin-top: 50px;
+}
+.toDoContainer {
+  width: 300px;
+  height: 400px;
+  position: absolute;
+  right: 50px;
+  margin-top: 20px;
+  top: 200px;
+}
+.toDoName {
+  width: 300px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.toDoFormInput {
+  background-color: transparent;
+  color: white;
+  width: 300px;
+  font-size: 20px;
+  text-align: center;
+  outline: 0;
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+li {
+  color: white;
+  margin-left: 10px;
+}
+
+.toDoFormInput::placeholder {
+  color: white;
+}
+
+.greetingForm,
+.greetings {
+  display: none;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+
+.showing {
+  display: block;
+}
+
+.weatherContainer {
+  position: absolute;
+  right: 100px;
+  top: 50px;
+  font-size: 30px;
+}
+
+.weatherIcon {
+  width: 100px;
+  height: 100px;
+  font-size: 30px;
+  position: absolute;
+  right: 100px;
+}
+
+.weather {
+  color: white;
+}
+
+.isYourName {
+  color: white;
+  font-size: 30px;
+}
+
+button {
+  all: unset;
+  color: red;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 10px 10px;
+  right: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+.toDoList {
+  padding: 0 0;
+  margin: 0 0;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.backIMG {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
+}
+
+@keyframes show {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  0% {
+    border-color: transparent;
+  }
+  1% {
+    border-color: white;
+  }
+  99% {
+    border-color: white;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+.typing {
+  opacity: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white;
+  animation: typing 2s steps(40, end) forwards,
+    blink-caret 2s steps(40, end) forwards, show 0.2s ease forwards;
+}
+.grettingInput {
+  color: white;
+  width: 300px;
+  font-size: 30px;
+  opacity: 0%;
+  outline: 0;
+  border: none;
+  border-bottom: 1px solid white;
+  animation: show 0.7s ease forwards;
+  animation-delay: 2s;
+  background-color: transparent;
+  text-align: center;
+}
+
+.grettingInput::placeholder {
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  font-size: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .clockH1,
+  .dateH1 {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    animation: fadeIn 8s linear;
+  }
+
+  .isYourName {
+    color: white;
+    font-size: 15px;
+  }
+
+  .grettingInput {
+    color: white;
+    width: 100px;
+    font-size: 15px;
+    opacity: 0%;
+    outline: 0;
+    border: none;
+    border-bottom: 1px solid white;
+    animation: show 0.7s ease forwards;
+    animation-delay: 2s;
+    background-color: transparent;
+    text-align: center;
+  }
+
+  .greetings {
+    margin-top: 100px;
+    font-size: 20px;
+  }
+  .toDoContainer {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 50px;
+
+    top: 100px;
+  }
+
+  .toDoName {
+    width: 100px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+  }
+  .toDoFormInput {
+    background-color: transparent;
+    color: white;
+    width: 100px;
+    font-size: 10px;
+    text-align: center;
+    outline: 0;
+    border: none;
+    border-bottom: 1px solid white;
+  }
+
+  .weatherContainer {
+    right: 200px;
+    top: 150px;
+    font-size: 30px;
+  }
+  .weatherIcon {
+    width: 100px;
+    height: 100px;
+    font-size: 30px;
+    position: absolute;
+    top: 50px;
+    right: 100px;
+  }
+  .bodyWiget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+  }
+  button {
+    font-size: 5px;
+  }
+
+  span {
+    font-size: 5px;
+  }
+
+  i {
+    font-size: 15px;
+  }
+}
