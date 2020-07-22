@@ -67,7 +67,7 @@ function handleSubmit(event) {
   event.preventDefault();
   if (toDoInput.value !== "") {
     if (toDos.length > 7) {
-      alert("초과");
+      alert("더이상 추가할수 없습니다.");
       toDoInput.text.disabled;
     }
     const currentValue = toDoInput.value;

@@ -34,7 +34,7 @@ function paintName(text) {
   //js-greetings에 showing 클래스 추가
   greeting.classList.add(SHOWING_CN);
   //js-greetings에 해당 텍스트 추가
-  greeting.innerText = `${text}님 반갑습니다.`;
+  greeting.innerText = `${text}님 반갑습니다.\n 즐거운하루 되세요.`;
 }
 
 function loadName() {
